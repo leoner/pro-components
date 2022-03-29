@@ -26,7 +26,7 @@ describe('ProForm', () => {
     expect(wrapper.render()).toMatchSnapshot();
   });
 
-  it('📦 componentSize is work ', async () => {
+  it('📦 componentSize is  work', async () => {
     const wrapper = mount(
       <ConfigProvider componentSize="small">
         <ProForm>
@@ -210,7 +210,7 @@ describe('ProForm', () => {
 
     await waitForComponentToPaint(wrapper, 200);
 
-    expect(wrapper.find('Input#test').props().value).toEqual('test');
+    expect(wrapper.find('input#test').props().value).toEqual('test');
 
     act(() => {
       wrapper.setProps({
@@ -221,7 +221,7 @@ describe('ProForm', () => {
     });
     await waitForComponentToPaint(wrapper, 500);
 
-    expect(wrapper.find('Input#test').props().value).toEqual('1234');
+    expect(wrapper.find('input#test').props().value).toEqual('1234');
   });
 
   it('📦 submit props actionsRender=()=>false', async () => {
@@ -812,7 +812,7 @@ describe('ProForm', () => {
     await waitForComponentToPaint(wrapper);
 
     act(() => {
-      wrapper.find('Input#testInput').simulate('change', {
+      wrapper.find('input#testInput').simulate('change', {
         target: {
           value: 'test',
         },
